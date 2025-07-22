@@ -6,19 +6,19 @@
 
 .heroSectionDiv {
   width: 95%;
-  height: 95%;
+  height: 90%;
   max-height: 908px;
   max-width: 1676px;
-  min-height: calc(100svh - 2.5vw);
+  min-height: calc(100svh - 5vw);
   background: url('../../../../assets/home_bg1.png') center/cover no-repeat;
   display: flex;
   align-items: stretch;
   justify-content: center;
   position: relative;
-  border-radius: 80px;
+  border-radius: 40px;
   overflow: hidden;
   box-sizing: border-box;
-}
+}                                        
 
 .overlay {
   width: 100%;
