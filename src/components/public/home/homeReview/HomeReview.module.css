@@ -1,10 +1,11 @@
 .container {
   margin: 32px;
+  background-color: #FFFEF7;
 }
 
 .bold {
   font-weight: bold;
-  font-size: 40px;
+  font-size: 40px;       
 }
 
 .light {
