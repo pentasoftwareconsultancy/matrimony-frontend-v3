@@ -10,9 +10,9 @@ function HomePage() {
     <div>
         <HeroSection />
         <HomeAbout />
-        <HomeAds />
-        <HomeReview />
         <HomeChart />
+        <HomeReview />
+        <HomeAds />
     </div>
   )
 }

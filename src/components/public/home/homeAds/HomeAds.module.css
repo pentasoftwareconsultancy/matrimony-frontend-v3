@@ -1,0 +1,87 @@
+.container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 32px;
+    height: auto;
+    /* border: solid black; */
+}
+
+.bgimg{
+    margin-top: 50px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.1;
+}
+
+.box{
+    /* position: absolute; */
+    width: 100%;
+    height: 600px;
+    background-size: contain;
+}
+
+.bold {
+    margin-top: 8rem;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.light {
+    color: #888;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.newsList {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.scroller {
+  width: 100%;
+  display: flex;
+  /* justify-content: center; */
+  align-items: end;
+  overflow: hidden;
+  margin-top: 50px;
+  position: relative;
+  height: 120px;
+  /* border: solid black; */
+}
+
+.scroller ul {
+  display: flex;
+  align-items: center;
+  gap: 150px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  animation: scroll-left 10s linear infinite;
+}
+
+.scroller li {
+  flex: 0 0 auto;
+}
+
+.scroller img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
