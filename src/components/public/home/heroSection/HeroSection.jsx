@@ -39,11 +39,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-<<<<<<< HEAD
-    <div>HeroSection</div>
-  )
-}   
-=======
+
     <section className={styles.heroSection}>
       <div className={styles.heroSectionDiv}>
         <div className={styles.overlay}>
@@ -205,6 +201,6 @@ const HeroSection = () => {
     </section>
   );
 };
->>>>>>> 66b1199773a413d8a7bc832889a018474894ba08
+
 
 export default HeroSection;
