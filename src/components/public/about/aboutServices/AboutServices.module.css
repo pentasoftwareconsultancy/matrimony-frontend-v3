@@ -5,10 +5,10 @@
     padding: 2rem 1rem;
 }
                             
-.headline {
+.headline {         
     font-size: 3rem;
     font-weight: 700;         
-    color: #777;
+    color: #777;                      
     /* line-height: 1.4; */
 }
 
