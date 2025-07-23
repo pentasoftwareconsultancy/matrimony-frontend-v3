@@ -8,13 +8,13 @@
     padding: 2rem;
     max-width: 1583px;
     max-height: 594px;
-
+    font-family: "Inter",sans-serif;
     margin: 2rem auto;
 }
 
 .aboutImage {
     width: 29.49rem;
-    height: 37.125rem;
+    height: 80vh;
     object-fit: cover;
     border-radius: 80px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
@@ -26,7 +26,7 @@
 }
 
 .aboutContent h2 {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 700;
     margin-top: 0;
     color: #2D2D2D;
@@ -35,8 +35,9 @@
 
 .aboutContent p {
     color: #767676;
-    font-size: 32px;
-    line-height: 52px;
+    font-size: 16px;
+    text-align: justify;
+    line-height: 2;
 }
 
 /* Responsive  */
