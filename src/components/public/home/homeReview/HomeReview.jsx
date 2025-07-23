@@ -48,8 +48,6 @@ const marriages = [
 ];
 
 export default function HomeReview() {
-  const [hovered, setHovered] = useState(null);
-  const [colors, setColors] = useState(Array(marriages.length).fill("rgba(60,0,20,0.55)"));
   const imgRefs = useRef([]);
 
   useEffect(() => {
@@ -65,7 +63,6 @@ export default function HomeReview() {
         })
         .catch(() => { });
     });
-    // eslint-disable-next-line
   }, []);
 
   return (
@@ -95,9 +92,7 @@ export default function HomeReview() {
               style={{ display: "none" }}
               crossOrigin="anonymous"
             />
-            <div
-              className={styles.overlay}
-            >
+            <div className={styles.overlay}>
               <div className={styles.names}>{m.names}</div>
               <div className={styles.reviewRow}>
                 <div className={styles.review}>{m.review}</div>
