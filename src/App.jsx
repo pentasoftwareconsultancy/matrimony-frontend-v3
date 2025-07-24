@@ -6,6 +6,7 @@ import PublicFooter from './components/public/publicFooter/PublicFooter'
 import AboutPage from './pages/publicPages/AboutPage'
 import RegisterPage from './pages/publicPages/RegisterPage'
 import Login from './components/public/login/Login'
+import AboutCommittee from './components/public/about/aboutHero/AboutCommittee'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Route path="/about" element={<AboutPage />} />
       <Route path="/register" element={<RegisterPage/>}/>
       <Route path="/login" element={<Login/>}/>
+      <Route path="/aboutcommittee" element={<AboutCommittee/>}/>
       </Routes>
       <PublicFooter />
     </div>
