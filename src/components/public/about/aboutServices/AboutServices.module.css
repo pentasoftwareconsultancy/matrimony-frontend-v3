@@ -13,7 +13,7 @@
 }
                      
 .animatedText {
-    display: inline-block;         
+    display: inline-block;
     color: #d61f69;
     font-weight: bold;
     animation: smoothSlideUp 0.6s ease forwards;

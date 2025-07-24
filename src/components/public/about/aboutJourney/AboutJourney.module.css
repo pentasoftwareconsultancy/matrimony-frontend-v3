@@ -1,0 +1,245 @@
+.container {
+    margin: 40px;
+    background-color: #FFFEF7;
+    font-family: "Inter", sans-serif;
+    color: white;
+}
+
+.heading1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #2D2D2D;
+}
+
+.heading2 {
+    font-size: 40px;
+    font-weight: bold;
+    background: linear-gradient(60deg, #E20741, #890025);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
+
+.desWrapper {
+    /* border: solid 1px #ccc; */
+    /* border-radius: 50px; */
+    height: 46vh;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.event {
+    /* padding: ;-bottom: 20px; */
+    display: flex;
+    flex-wrap: nowrap;
+    /* white-space: nowrap; */
+    will-change: transform;
+    gap: 30px;
+}
+
+.event::-webkit-scrollbar {
+    display: none;
+    /* WebKit scrollbar hidden */
+}
+
+.cards::-webkit-scrollbar {
+    display: none;
+}
+
+.eventCardLarge {
+    /* flex: 0 0 auto; */
+    width: 40%;
+    height: 42vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 32px;
+    flex-shrink: 0;
+}
+
+.eventCardSmall {
+    /* flex: 0 0 auto; */
+    width: 24%;
+    height: 42vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 32px;
+    flex-shrink: 0;
+}
+
+.eventOverlay h3,
+.eventOverlay p {
+    margin: 0;
+}
+
+.eventOverlay {
+    width: 100%;
+    height: 18vh;
+    /* padding: 6px 24px;  */
+    backdrop-filter: blur(2px);
+    /* background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.2)); */
+    /* background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.6),rgba(255, 255, 255, 0)); */
+    background-image: linear-gradient(360deg, rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0));
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 0px 0px 50px 50px;
+}
+
+/* .eventOverlay:hover {
+    background-image: linear-gradient(360deg, rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0));
+} */
+
+.eventDetails {
+    padding: 20px 40px;
+}
+
+.eventTitle {
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.eventDescription {
+    font-size: 14px;
+    /* font-weight: 400; */
+}
+
+.reviewWrapper {
+    /* border: solid 1px #ccc; */
+    /* border-radius: 50px; */
+    /* optional border */
+    height: 46vh;
+    /* adjust based on card height */
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.review {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    /* white-space: nowrap; */
+    will-change: transform;
+    gap: 30px;
+}
+
+.reviewCard {
+    /* margin-right: 20px; */
+    width: 24%;
+    height: 46vh;
+    flex: 0 0 auto;
+    /* width: 20%; */
+    /* width: 300px; */
+    height: 42vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    /* margin-bottom: 32px; */
+    flex-shrink: 0;
+}
+
+.reviewDetails {
+    padding: 20px 40px;
+}
+
+.reviewName {
+    /* font-size: 26px; */
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.reviewMessage {
+    /* font-size: 16px; */
+    font-size: 14px;
+    /* font-weight: 400; */
+}
+
+.blog {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.event::-webkit-scrollbar {
+    display: none;
+}
+
+.cards::-webkit-scrollbar {
+    display: none;
+}
+
+.blogCard {
+    /* width: 56%;
+    height: 56vh; */
+    width: 52%;
+    height: 52vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 32px;
+    flex-shrink: 0;
+}
+
+.blogOverlay {
+    width: 100%;
+    height: 16vh;
+    /* padding: 6px 24px;  */
+    backdrop-filter: blur(2px);
+    background-image: linear-gradient(360deg, rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0));
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 0px 0px 50px 50px;
+}
+
+.blogOverlay h3,
+.blogOverlay p {
+    margin: 0;
+}
+
+.blogDetails {
+    padding: 20px 40px;
+}
+
+.blogTitle {
+    padding-bottom: 5px;
+    font-size: 24px;
+}
+
+.blogMessage {
+    font-size: 14px;
+}

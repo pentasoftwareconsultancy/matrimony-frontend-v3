@@ -1,0 +1,273 @@
+.aboutchartContainer {
+  background-color: white;
+  padding: 46px;
+  max-width: 1582px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.aboutchartHeading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.aboutchartGrid {
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "box1 box2 box2"
+    "box3 box4 box5";
+  gap: 20px;
+  row-gap: 50px; /* Add row gap between top and bottom rows */
+}
+
+
+.aboutchartBox {
+  border-radius: 32px;
+  padding: 24px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+  color: white;
+  box-sizing: border-box;
+}
+
+
+.aboutchartNumber {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+
+/* Individual Box Styles */
+.box1 {
+  background: linear-gradient(to right, #b00035, #b30033);
+  grid-area: box1;
+  height: 170%;
+  /* margin-bottom: -10%; */
+  border-radius: 60px;
+}
+
+.box2 {
+  background: linear-gradient(to right, #b00035, #b30033);
+  grid-area: box2;
+  margin-bottom: -20px;
+  border-radius: 60px;
+}
+
+.box3 {
+  background: linear-gradient(to right, #b00035, #b30033);
+  grid-area: box3;
+  width: 99%;
+  height: 65%;
+  margin-top: 25%;
+  padding: 30px;
+  border-radius: 60px;
+}
+.box4 {
+  grid-area: box4;
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 32px;
+  color: #b00035;
+  font-weight: 600;
+  display: flex;
+ 
+  flex-direction: column;
+  justify-content: space-between;
+    border-radius: 60px;
+}
+
+.box5 {
+  background: linear-gradient(to right, #b00035, #b30033);
+  grid-area: box5;
+  height: 105%;
+    border-radius: 60px;
+}
+
+/* Chart container */
+.chartContainer {
+  width: 92%;
+  height: 92%;
+  padding: 20px;
+  border-radius: 60px;
+  background-color: #ffffff;
+  border: 1px solid #ececec;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  /* Shadow effect */
+  box-shadow: 0 4px 12px rgba(176, 0, 53, 0.12);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Optional: Enhanced shadow on hover */
+.chartContainer:hover {
+  box-shadow: 0 6px 16px rgba(176, 0, 53, 0.15);
+}
+
+/* Rest of your existing styles remain unchanged */
+.graphTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+  color: #b00035;
+  text-align: left;
+}
+
+.graphBody {
+  flex: 1;
+  position: relative;
+  margin: 10px 0 25px 0;
+}
+
+
+/* Year markers container */
+.graphYears {
+  display: flex;
+  justify-content: space-between; /* Evenly spaced */
+  padding: 0 5%; /* Match graph area padding */
+  position: relative;
+}
+
+
+
+/* Individual year labels */
+.graphYears span {
+  position: relative;
+  font-size: 14px;
+  color: #666666; /* Dark gray */
+  font-weight: 500;
+  padding-top: 15px; /* Space for the line */
+}
+
+.graphSvg {
+  width: 90%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.linePath {
+  fill: none;
+  stroke: #b00035;
+  stroke-width: 1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: drawLine 3s ease-in-out infinite;
+}
+
+.areaFill {
+  fill: url(#gradient);
+  opacity: 0;
+  animation: fadeInArea 3s ease-in-out infinite;
+}
+
+@keyframes drawLine {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadeInArea {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .aboutchartContainer {
+    padding: 30px;
+  }
+  
+  .aboutchartGrid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "box1 box3"
+      "box2 box2"
+      "box4 box5";
+    row-gap: 20px;
+  }
+  
+  .box1, .box2, .box3, .box5 {
+    height: auto;
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutchartContainer {
+    padding: 20px;
+  }
+  
+  .aboutchartGrid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "box1"
+      "box2"
+      "box3"
+      "box5"
+      "box4";
+  }
+  
+  .aboutchartBox {
+    margin-bottom: 20px;
+  }
+  
+  .chartContainer {
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutchartContainer {
+    padding: 15px;
+  }
+  
+  .aboutchartHeading {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .aboutchartBox {
+    padding: 15px;
+    border-radius: 24px;
+  }
+  
+  .chartContainer {
+    border-radius: 24px;
+    padding: 10px;
+  }
+  
+  .graphTitle {
+    font-size: 0.9rem;
+  }
+}
