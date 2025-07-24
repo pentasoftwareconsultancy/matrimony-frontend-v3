@@ -1,0 +1,88 @@
+.container {
+    max-width: 100%;
+    margin: 0 40px;
+    padding: 2rem 1rem;
+}
+
+.headline {
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: #777;
+}
+
+.animatedText {
+    display: inline-block;
+    color: #d61f69;
+    font-weight: bold;
+    animation: smoothSlideUp 0.6s ease forwards;
+}
+
+.description {
+    font-size: 2rem;
+    width: 65%;
+    color: #666;
+    font-style: italic;
+    margin-top: -2rem;
+    line-height: 1.7;
+    animation: smoothSlideUp 0.6s ease forwards;
+}
+
+@keyframes smoothSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ✅ Responsive for tablets */
+@media (max-width: 900px) {
+    .container {
+        margin: 0 20px;
+        padding: 1.5rem 1rem;
+    }
+
+    .headline {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .description {
+        font-size: 1.4rem;
+        width: 90%;
+        margin-top: -1.2rem;
+        text-align: center;
+    }
+
+    .animatedText {
+        font-size: 2rem;
+        display: block;
+        text-align: center;
+    }
+}
+
+/* ✅ Responsive for mobiles */
+@media (max-width: 600px) {
+    .container {
+        margin: 0 10px;
+        padding: 1rem;
+    }
+
+    .headline {
+        font-size: 2.2rem;
+    }
+
+    .description {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        width: 100%;
+    }
+
+    .animatedText {
+        font-size: 1.6rem;
+    }
+}
