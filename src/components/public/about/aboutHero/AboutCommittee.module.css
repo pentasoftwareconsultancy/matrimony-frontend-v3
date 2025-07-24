@@ -1,0 +1,146 @@
+.AboutCommitteeSection{
+  max-width: 100%;
+}
+
+.titleHeading {
+  padding: 2rem 0 0 5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.titleHeadingColor {
+  display: block;
+  color: #C00A3A;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.committeeContainer {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.card {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: row;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  height: 222px;
+  border-radius: 25px;
+}
+
+.wide {
+  width: 52%;
+}
+
+.narrow {
+  width: 40%;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.image {
+  width: 124px;
+  height: 181px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  margin: 1rem;
+  flex-shrink: 0;
+}
+
+.content {
+  padding: 0.4rem 1rem 1rem 0;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2D2D2D;
+  line-height: 100%;
+}
+
+.designation {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #2D2D2D;
+}
+
+.details {
+  font-size: 10px;
+  font-weight: 500;
+  color: #2D2D2D;
+  line-height: 10px;
+}
+
+.biography {
+  font-size: 10px;
+  font-weight: 300;
+  color: #767676;
+  line-height: 10px;
+}
+
+.readMore {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+
+.readMoreBtn {
+  padding: 1rem 1rem;
+  width: 151px;
+  display: inline-flex;
+  justify-content: center;
+  border: none;
+  background: #FFFEF7;
+  color: #C00A3A;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  gap: 0.3rem;
+  transition: background 0.3s ease;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.readMoreBtn:hover {
+  background: #C00A3A;
+  color: #FFFEF7;
+}
+
+@media (max-width: 900px) {
+  .wide,
+  .narrow {
+    width: 100%;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .image {
+    width: 100%;
+    height: 160px;
+    border-radius: 25px 25px 0 0;
+    margin: 0;
+  }
+
+  .content {
+    padding: 1.2rem;
+  }
+
+  .readMore {
+    align-self: flex-start;
+  }
+}
