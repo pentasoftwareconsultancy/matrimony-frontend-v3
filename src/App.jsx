@@ -4,6 +4,8 @@ import HomePage from './pages/publicPages/HomePage'
 import PublicNavbar from './components/public/publicNavbar/PublicNavbar'
 import PublicFooter from './components/public/publicFooter/PublicFooter'
 import AboutPage from './pages/publicPages/AboutPage'
+import RegisterPage from './pages/publicPages/RegisterPage'
+import Login from './components/public/login/Login'
 
 function App() {
   return (
@@ -11,8 +13,10 @@ function App() {
       <PublicNavbar />
       <Routes>
       <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-    </Routes>
+      <Route path="/about" element={<AboutPage />} />
+      <Route path="/register" element={<RegisterPage/>}/>
+      <Route path="/login" element={<Login/>}/>
+      </Routes>
       <PublicFooter />
     </div>
   )
