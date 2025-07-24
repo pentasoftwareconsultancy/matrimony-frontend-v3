@@ -1,16 +1,19 @@
 import React from 'react'
 import styles from "./AboutHero.module.css"
 import AboutHeroData from './AboutHeroData'
+import { Link } from 'react-router-dom'
 
 const AboutHero = () => {
   return (
     <section className={styles.heroSection}>
       <div className={styles.imageGrid}>
         {AboutHeroData.map((person, index) => (
+          <Link to="/aboutcommittee">
           <div key={index} className={styles.card}>
             <img src={person.image} alt={person.name} />
             <div className={styles.name}>{person.name}</div>
           </div>
+          </Link>
         ))}
       </div>
 
