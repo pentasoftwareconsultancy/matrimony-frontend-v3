@@ -1,5 +1,5 @@
 .container {
-    margin: 40px;
+    margin: 0px 40px;
     background-color: #FFFEF7;
     font-family: "Inter", sans-serif;
     color: white;
@@ -23,8 +23,6 @@
 }
 
 .desWrapper {
-    /* border: solid 1px #ccc; */
-    /* border-radius: 50px; */
     height: 46vh;
     overflow: hidden;
     position: relative;
@@ -32,17 +30,14 @@
 }
 
 .event {
-    /* padding: ;-bottom: 20px; */
     display: flex;
     flex-wrap: nowrap;
-    /* white-space: nowrap; */
     will-change: transform;
     gap: 30px;
 }
 
 .event::-webkit-scrollbar {
     display: none;
-    /* WebKit scrollbar hidden */
 }
 
 .cards::-webkit-scrollbar {
@@ -50,7 +45,7 @@
 }
 
 .eventCardLarge {
-    /* flex: 0 0 auto; */
+    flex: 0 0 auto;
     width: 40%;
     height: 42vh;
     background-size: cover;
@@ -67,8 +62,8 @@
 }
 
 .eventCardSmall {
-    /* flex: 0 0 auto; */
-    width: 24%;
+    flex: 0 0 auto;
+    width: 22%;
     height: 42vh;
     background-size: cover;
     background-position: center;
@@ -91,7 +86,6 @@
 .eventOverlay {
     width: 100%;
     height: 18vh;
-    /* padding: 6px 24px;  */
     backdrop-filter: blur(2px);
     /* background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.2)); */
     /* background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.6),rgba(255, 255, 255, 0)); */
@@ -99,12 +93,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    border-radius: 0px 0px 50px 50px;
 }
-
-/* .eventOverlay:hover {
-    background-image: linear-gradient(360deg, rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0));
-} */
 
 .eventDetails {
     padding: 20px 40px;
@@ -118,15 +107,10 @@
 
 .eventDescription {
     font-size: 14px;
-    /* font-weight: 400; */
 }
 
 .reviewWrapper {
-    /* border: solid 1px #ccc; */
-    /* border-radius: 50px; */
-    /* optional border */
     height: 46vh;
-    /* adjust based on card height */
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -136,19 +120,14 @@
     margin-bottom: 20px;
     display: flex;
     flex-wrap: nowrap;
-    /* white-space: nowrap; */
     will-change: transform;
     gap: 30px;
 }
 
 .reviewCard {
-    /* margin-right: 20px; */
-    width: 24%;
-    height: 46vh;
-    flex: 0 0 auto;
-    /* width: 20%; */
-    /* width: 300px; */
+    width: 22%;
     height: 42vh;
+    flex: 0 0 auto;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -158,7 +137,6 @@
     position: relative;
     display: flex;
     align-items: flex-end;
-    /* margin-bottom: 32px; */
     flex-shrink: 0;
 }
 
@@ -167,25 +145,28 @@
 }
 
 .reviewName {
-    /* font-size: 26px; */
     font-size: 24px;
     font-weight: bold;
     padding-bottom: 10px;
 }
 
 .reviewMessage {
-    /* font-size: 16px; */
     font-size: 14px;
-    /* font-weight: 400; */
+}
+
+.blogWrapper {
+    height: 52vh;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
 }
 
 .blog {
     display: flex;
     gap: 30px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+    will-change: transform;
 }
 
 .event::-webkit-scrollbar {
@@ -197,10 +178,10 @@
 }
 
 .blogCard {
-    /* width: 56%;
-    height: 56vh; */
+    height: 56vh;
     width: 52%;
     height: 52vh;
+    flex: 0 0 auto;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -217,13 +198,11 @@
 .blogOverlay {
     width: 100%;
     height: 16vh;
-    /* padding: 6px 24px;  */
     backdrop-filter: blur(2px);
     background-image: linear-gradient(360deg, rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0));
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    border-radius: 0px 0px 50px 50px;
 }
 
 .blogOverlay h3,
@@ -242,4 +221,249 @@
 
 .blogMessage {
     font-size: 14px;
+}
+
+.featured {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: auto;
+    margin-bottom: -60px;
+}
+
+.bgimg {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    object-fit: contain;
+    z-index: 1;
+    opacity: 0.1;
+}
+
+.box {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: start;
+    background-size: contain;
+}
+
+.featuredHeading {
+    padding-top: 50px;
+    color: #2D2D2D;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.bolding {
+    font-weight: bold;
+    color: #E20741;
+}
+
+.arrow {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50px;
+    right: 20px;
+    background-color: #E20741;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* === Responsive Media Queries === */
+
+/* Small Mobile Devices */
+/* Extra Small Devices (≤400px width) */
+@media screen and (max-width: 400px) {
+  .heading1,
+  .heading2 {
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .eventCardLarge,
+  .eventCardSmall,
+  .reviewCard,
+  .blogCard {
+    width: 100%;
+    height: 38vh;
+    border-radius: 25px;
+  }
+
+  .eventDetails,
+  .reviewDetails,
+  .blogDetails {
+    padding: 10px 15px;
+  }
+
+  .eventTitle,
+  .reviewName,
+  .blogTitle {
+    font-size: 14px;
+  }
+
+  .eventDescription,
+  .reviewMessage,
+  .blogMessage {
+    font-size: 8px;
+  }
+
+  .arrow {
+    padding: 10px;
+    top: 8px;
+    right: 8px;
+  }
+
+  .featuredHeading {
+    font-size: 15px;
+    text-align: center;
+    padding-top: 25px;
+  }
+
+  .box {
+    height: 250px;
+    justify-content: center;
+  }
+
+  .bgimg {
+    opacity: 0.08;
+  }
+
+  .container {
+    margin: 0px 16px;
+  }
+
+  .eventOverlay,
+  .blogOverlay {
+    height: 6vh;
+    border-radius: 0px 0px 25px 25px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .heading1,
+  .heading2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .eventCardLarge,
+  .eventCardSmall,
+  .reviewCard,
+  .blogCard {
+    width: 100vw;
+    height: 15vh;
+    border-radius: 30px;
+  }
+
+  .event,
+  .review,
+  .blog {
+    gap: 20px;
+  }
+
+  .desWrapper,
+  .reviewWrapper,
+  .blogWrapper {
+    height: auto;
+    width: 100vw;
+  }
+
+  .eventDetails,
+  .reviewDetails,
+  .blogDetails {
+    padding: 12px 20px;
+  }
+
+  .eventTitle,
+  .reviewName,
+  .blogTitle {
+    font-size: 14px;
+  }
+
+  .eventDescription,
+  .reviewMessage,
+  .blogMessage {
+    font-size: 10px;
+  }
+
+  .arrow {
+    top: 10px;
+    right: 10px;
+    padding: 1px;
+  }
+
+  .featuredHeading {
+    font-size: 12px;
+    padding-top: 3px;
+  }
+
+  .box {
+    height: 10px;
+  }
+}
+
+/* Tablets */
+@media screen and (max-width: 900px) {
+  .eventCardLarge {
+    width: 70%;
+  }
+
+  .eventCardSmall,
+  .reviewCard,
+  .blogCard {
+    width: 40%;
+  }
+
+  .featuredHeading {
+    font-size: 26px;
+  }
+
+  .arrow {
+    padding: 16px;
+    top: 25px;
+  }
+
+  .box {
+    height: 400px;
+  }
+}
+
+/* Laptops */
+@media screen and (max-width: 1280px) {
+  .eventCardLarge {
+    width: 50%;
+  }
+
+  .eventCardSmall,
+  .reviewCard,
+  .blogCard {
+    width: 30%;
+  }
+
+  .blogCard {
+    width: 40%;
+  }
+
+  .heading1,
+  .heading2 {
+    font-size: 32px;
+  }
+
+  .featuredHeading {
+    font-size: 28px;
+  }
+
+  .box {
+    height: 450px;
+  }
 }
