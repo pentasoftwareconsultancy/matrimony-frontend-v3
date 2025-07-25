@@ -1,9 +1,10 @@
 .AboutCommitteeSection{
+  padding: 4rem 0;
   max-width: 100%;
 }
 
 .titleHeading {
-  padding: 2rem 0 0 5rem;
+  padding-left: 5rem;
   font-size: 2.5rem;
   font-weight: 700;
 }
@@ -26,6 +27,7 @@
 }
 
 .card {
+  position: relative;
   flex: 0 0 auto;
   display: flex;
   flex-direction: row;
@@ -41,8 +43,16 @@
   width: 52%;
 }
 
+.wide .readMore {
+  margin: 9rem 1rem 1rem 73%;
+}
+
 .narrow {
   width: 40%;
+}
+
+.narrow .readMore {
+  margin: 9rem 1rem 1rem 63%;
 }
 
 .card:hover {
@@ -59,7 +69,8 @@
 }
 
 .content {
-  padding: 0.4rem 1rem 1rem 0;
+  position: relative;
+  padding: 0.4rem 1rem 0 0;
   height: 100%;
   flex: 1;
   display: flex;
@@ -67,33 +78,39 @@
 }
 
 .name {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: #2D2D2D;
-  line-height: 100%;
+  line-height: 0;
 }
 
 .designation {
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   color: #2D2D2D;
+  margin: 0;
+  padding: 0;
 }
 
 .details {
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 500;
   color: #2D2D2D;
-  line-height: 10px;
+  margin: 0;
+  padding: 0;
 }
 
 .biography {
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 300;
   color: #767676;
-  line-height: 10px;
+  margin: 0;
+  padding: 0;
+  line-height: 20px;
 }
 
 .readMore {
+  position: absolute;
   display: flex;
   justify-content: end;
   align-items: end;
