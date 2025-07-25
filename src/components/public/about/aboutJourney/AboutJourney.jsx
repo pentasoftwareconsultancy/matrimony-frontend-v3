@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useLayoutEffect } from 'react';
+import { useRef, useLayoutEffect } from 'react';
 import styles from "./AboutJourney.module.css";
 import img1 from "../../../../assets/images/event/event1.png";
 import img2 from "../../../../assets/images/event/event2.png";
@@ -16,8 +16,11 @@ import blog1 from "../../../../assets/images/blog/blog1.png";
 import blog2 from "../../../../assets/images/blog/blog2.png";
 import blog3 from "../../../../assets/images/blog/blog3.png";
 
+import bgm from "../../../../assets/images/Soyrik.png";
+
+import arrowi from "../../../../assets/images/arrow-up.png"
+
 import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const AboutJourney = () => {
@@ -105,6 +108,8 @@ const AboutJourney = () => {
   const descriptionTrackRef = useRef(null);
   const reviewContainerRef = useRef(null);
   const reviewTrackRef = useRef(null);
+  const blogContainerRef = useRef(null);
+  const blogTrackRef = useRef(null);
 
   const boxRef = useRef(null);
 
@@ -159,6 +164,34 @@ const AboutJourney = () => {
 
     return () => ctx.revert();
   }, [reviews]);
+
+  // Left to Right for Description
+  useLayoutEffect(() => {
+    const track = blogTrackRef.current;
+    if (!track || !blog.length) return;
+
+    const ctx = gsap.context(() => {
+      const totalWidth = track.scrollWidth / 2;
+      const speed = 100;
+      const duration = totalWidth / speed;
+
+      gsap.fromTo(
+        track,
+        { x: -totalWidth },
+        {
+          x: 0,
+          duration: duration,
+          ease: 'none',
+          repeat: -1,
+          modifiers: {
+            x: gsap.utils.unitize(x => (parseFloat(x) % totalWidth)),
+          },
+        }
+      );
+    }, blogContainerRef);
+
+    return () => ctx.revert();
+  }, [blog]);
 
   return (
     <div className={styles.container}>
@@ -219,27 +252,37 @@ const AboutJourney = () => {
         </div>
       </div>
 
-      <div className={styles.blog}>
-        {blog.map((item, index) => (
-          <div
-            key={index}
-            className={styles.blogCard}
-            style={{
-              backgroundImage: `url(${item.image})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat'
-            }}
-          >
-            <div className={styles.blogOverlay}>
-              <div className={styles.blogDetails}>
-                <h3 className={styles.blogTitle}>Blog</h3>
-                <p className={styles.blogName}>{item.data}</p>
-                <p className={styles.blogMessage}>{item.blog}</p>
+      <div className={styles.blogWrapper} ref={blogContainerRef}>
+        <div className={styles.blog} ref={blogTrackRef}>
+          {[...blog, ...blog].map((item, index) => (
+            <div
+              key={index}
+              className={styles.blogCard}
+              style={{
+                backgroundImage: `url(${item.image})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
+              }}
+            >
+              <div className={styles.blogOverlay}>
+                <div className={styles.blogDetails}>
+                  <h3 className={styles.blogTitle}>Blog</h3>
+                  <p className={styles.blogName}>{item.data}</p>
+                  <p className={styles.blogMessage}>{item.blog}</p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+      </div>
+
+      <div className={styles.featured}>
+        <img className={styles.bgimg} src={bgm} alt="Background" />
+        <div className={styles.box}>
+          <h1 className={styles.featuredHeading}>"Want to be featured in our gallery? Share your wedding photos with <span className={styles.bolding}>#KunbiSamajMatches</span>"</h1>
+          <button className={styles.arrow}><img src={arrowi} alt="" /></button>
+        </div>
       </div>
     </div>
   );
