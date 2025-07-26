@@ -1,10 +1,9 @@
 .heroSection {
   width: 100%;
-  height: 65vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 7rem 0 10rem;
+  padding-top: 100px;
   text-align: center;
   background: #fff;
   position: relative;
@@ -72,8 +71,13 @@
 
 .textContent {
   max-width: 700px;
-  margin: 22% auto;
+  margin-top: 22%;
   z-index: 2;
+}
+
+.coustomebrake1,
+.coustomebrake2 {
+  display: none;
 }
 
 .textContent h2 {
@@ -103,6 +107,8 @@
 .cta:hover {
   background-color: #b91c2a;
 }
+
+/* -------------------------------------weidth----------------------------------------------- */
 
 @media (max-width: 1400px) {
   .card {
@@ -145,7 +151,7 @@
   .card12 { top: 330px; right: 0%; } /* card12 */
 
   .textContent {
-    margin: 25% auto;
+    margin-top: 25%;
   }
 
   .textContent h2 {
@@ -156,5 +162,54 @@
     font-size: 0.9rem;
   }
 
-  
+  .coustomebrake2 {
+    display: inline;
+  }
+}
+
+@media (max-width: 1000px) {
+  .card {
+    width: 80px;
+    height: 120px;
+  }
+
+  .card1 { top: 180px; left: 0%; } /* card1 */
+  .card2 { top: 310px; left: 0%; } /* card2 */
+  .card3 { top: 60px;  left: 12.8%; } /* card3 */
+  .card4 { top: 185px; left: 12.8%; } /* card4 */
+  .card5 { top: 80px;  left: 25%; } /* card5 */
+  .card6 { top: 0px;  left: 38%; } /* card6 */
+  .card7 { top: 80px; right: 38%; } /* card7 */
+  .card8 { top: 0px;  right: 25%; } /* card8 */
+  .card9 { top: 100px; right: 12.8%; } /* card9 */
+  .card10 { top: 230px; right: 12.8%; } /* card10 */
+  .card11 { top: 180px; right: 0%; } /* card11 */
+  .card12 { top: 310px; right: 0%; } /* card12 */
+
+}
+
+@media (max-width: 900px) {
+  .card {
+    width: 70px;
+    height: 110px;
+  }
+
+  .card1 { top: 100px; left: 0%; } /* card1 */
+  .card2 { top: 220px; left: 0%; } /* card2 */
+  .card3 { top: 0px;  left: 12.8%; } /* card3 */
+  .card4 { top: 120px; left: 12.8%; } /* card4 */
+  .card5 { top: 40px;  left: 25%; } /* card5 */
+  .card6 { top: 0px;  left: 38%; } /* card6 */
+  .card7 { top: 40px; right: 38%; } /* card7 */
+  .card8 { top: 0px; right: 25%; } /* card8 */
+  .card9 { top: 40px; right: 12.8%; } /* card9 */
+  .card10 { top: 160px; right: 12.8%; } /* card10 */
+  .card11 { top: 100px; right: 0%; } /* card11 */
+  .card12 { top: 220px; right: 0%; } /* card12 */
+}
+
+@media (max-width: 780px) {
+  .coustomebrake1 {
+    display: inline;
+  }
 }
