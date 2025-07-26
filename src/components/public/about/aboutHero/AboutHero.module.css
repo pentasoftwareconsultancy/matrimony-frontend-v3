@@ -30,8 +30,8 @@
 /* Now position each card manually */
 .card1 { top: 120px; left: 0%; } /* card1 */
 .card2 { top: 330px; left: 0%; } /* card2 */
-.card3 { top: 0px;  left: 12.8%; } /* card3 */
-.card4 { top: 205px; left: 12.8%; } /* card4 */
+.card3 { top: 40px;  left: 12.8%; } /* card3 */
+.card4 { top: 250px; left: 12.8%; } /* card4 */
 .card5 { top: 100px;  left: 25%; } /* card5 */
 .card6 { top: 0px;  left: 38%; } /* card6 */
 .card7 { top: 100px; right: 38%; } /* card7 */
@@ -119,8 +119,8 @@
   /* Now position each card manually */
   .card1 { top: 150px; left: 0%; } /* card1 */
   .card2 { top: 330px; left: 0%; } /* card2 */
-  .card3 { top: 30px;  left: 12.8%; } /* card3 */
-  .card4 { top: 205px; left: 12.8%; } /* card4 */
+  .card3 { top: 70px;  left: 12.8%; } /* card3 */
+  .card4 { top: 250px; left: 12.8%; } /* card4 */
   .card5 { top: 100px;  left: 25%; } /* card5 */
   .card6 { top: 0px;  left: 38%; } /* card6 */
   .card7 { top: 100px; right: 38%; } /* card7 */
@@ -131,24 +131,30 @@
   .card12 { top: 330px; right: 0%; } /* card12 */
 }
 
+@media (max-width: 1280px) {
+  .textContent {
+    margin-top: 30%;
+  }
+}
+
 @media (max-width: 1200px) {
   .card {
     width: 100px;
     height: 140px;
   }
 
-  .card1 { top: 180px; left: 0%; } /* card1 */
-  .card2 { top: 330px; left: 0%; } /* card2 */
-  .card3 { top: 60px;  left: 12.8%; } /* card3 */
-  .card4 { top: 205px; left: 12.8%; } /* card4 */
+  .card1 { top: 110px; left: 0%; } /* card1 */
+  .card2 { top: 260px; left: 0%; } /* card2 */
+  .card3 { top: 40px;  left: 12.8%; } /* card3 */
+  .card4 { top: 190px; left: 12.8%; } /* card4 */
   .card5 { top: 100px;  left: 25%; } /* card5 */
   .card6 { top: 0px;  left: 38%; } /* card6 */
   .card7 { top: 100px; right: 38%; } /* card7 */
   .card8 { top: 0px;  right: 25%; } /* card8 */
-  .card9 { top: 100px;  right: 12.8%; } /* card9 */
-  .card10 { top: 250px; right: 12.8%; } /* card10 */
-  .card11 { top: 180px; right: 0%; } /* card11 */
-  .card12 { top: 330px; right: 0%; } /* card12 */
+  .card9 { top: 40px;  right: 12.8%; } /* card9 */
+  .card10 { top: 190px; right: 12.8%; } /* card10 */
+  .card11 { top: 110px; right: 0%; } /* card11 */
+  .card12 { top: 260px; right: 0%; } /* card12 */
 
   .textContent {
     margin-top: 25%;
@@ -209,7 +215,79 @@
 }
 
 @media (max-width: 780px) {
+  .imageGrid {
+    width: 98%;
+  }
+
   .coustomebrake1 {
     display: inline;
   }
+}
+
+@media (max-width: 630px) {
+  .textContent {
+    margin-top: 30%;
+  }
+
+  .textContent h2 {
+    font-size: 1.2rem;
+  }
+
+  .textContent p {
+    font-size: 0.8rem;
+  }
+
+  .cta {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .card1 { display: none;}
+  .card2 { display: none;}
+  .card3 { top: 100px; left: 0%; } /* card3 */
+  .card4 { top: 220px; left: 0%; } /* card4 */
+  .card5 { top: 50px; left: 15%; } /* card */
+  .card6 { top: 20px; left: 30%; } /* card6 */
+  .card7 { top: 50px; right: 30%; } /* card7 */
+  .card8 { top: 20px; right: 15%; } /* card8 */
+  .card9 { top: 100px; right: 0%; } /* card9 */
+  .card10 { top: 220px; right: 0%; } /* card10 */
+  .card11 { display: none;}
+  .card12 { display: none;}
+
+  .textContent {
+    margin-top: 50%;
+  }
+}
+
+@media (max-width: 500px) {
+  .card3 { top: 100px; left: 0%; } /* card3 */
+  .card4 { top: 220px; left: 0%; } /* card4 */
+  .card5 { top: 50px; left: 17%; } /* card */
+  .card6 { top: 20px; left: 34%; } /* card6 */
+  .card7 { top: 50px; right: 34%; } /* card7 */
+  .card8 { top: 20px; right: 17%; } /* card8 */
+  .card9 { top: 100px; right: 0%; } /* card9 */
+  .card10 { top: 220px; right: 0%; } /* card10 */
+}
+
+@media (max-width: 450px) {
+  .card3 { display: none; } /* card3 */
+  .card4 { display: none; } /* card4 */
+  .card5 { top: 50px; left: 0%; } /* card */
+  .card6 { top: 50px; left: 20%; } /* card6 */
+  .card7 { top: 50px; right: 41%; } /* card7 */
+  .card8 { top: 50px; right: 20%; } /* card8 */
+  .card9 { top: 50px; right: 0%; } /* card9 */
+  .card10 { display: none; } /* card10 */
+}
+
+@media (max-width: 380px) {
+  .card5 { top: 50px; left: 0%; } /* card5 */
+  .card6 { top: 50px; left: 27%; } /* card6 */
+  .card7 { display: none; } /* card7 */
+  .card8 { top: 50px; right: 27%; } /* card8 */
+  .card9 { top: 50px; right: 0%; } /* card9 */
 }
