@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './App.css'
-import {Routes, Route} from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import HomePage from './pages/publicPages/HomePage'
 import PublicNavbar from './components/public/publicNavbar/PublicNavbar'
 import PublicFooter from './components/public/publicFooter/PublicFooter'
@@ -12,22 +12,31 @@ import FirstAnimation from './components/firstAnimation/FirstAnimation'
 
 function App() {
   const [splashDone, setSplashDone] = useState(false)
+  const location = useLocation()
+
+  // Routes where we hide navbar/footer
+  const hideLayoutRoutes = ['/login', '/register']
+  const hideLayout = hideLayoutRoutes.includes(location.pathname)
+
   if (!splashDone) {
     return <FirstAnimation onFinish={() => setSplashDone(true)} />
   }
+
   return (
     <div>
-      <PublicNavbar />
+      {!hideLayout && <PublicNavbar />}
+
       <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/about" element={<AboutPage />} />
-      <Route path="/register" element={<RegisterPage/>}/>
-      <Route path="/login" element={<Login/>}/>
-      <Route path="/aboutcommittee" element={<AboutCommittee/>}/>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/aboutcommittee" element={<AboutCommittee />} />
       </Routes>
-      <PublicFooter />
+
+      {!hideLayout && <PublicFooter />}
     </div>
   )
 }
-           
+
 export default App
