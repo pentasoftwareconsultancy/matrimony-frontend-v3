@@ -138,26 +138,210 @@
   color: #FFFEF7;
 }
 
-@media (max-width: 900px) {
-  .wide,
-  .narrow {
+@media (max-width: 1500px) {
+  .readMoreBtn {
     width: 100%;
-    flex-direction: column;
-    height: auto;
+    padding: 0.8rem 1rem;
   }
 
-  .image {
+  .name {
+    font-size: 1.3rem;
+  }
+
+  .designation {
+    font-size: 1.3rem;
+  }
+
+  .details {
+    font-size: 13px;
+  }
+
+  .biography {
+    font-size: 13px;
+  }
+
+  .narrow .readMore {
+    margin: 9rem 1rem 1rem 53%;
+  }
+
+  .wide .readMore {
+    margin: 9rem 1rem 1rem 63%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .name {
+    font-size: 1.1rem;
+  }
+
+  .designation {
+    font-size: 1.1rem;
+  }
+
+  .details {
+    font-size: 10px;
+  }
+
+  .biography {
+    font-size: 10px;
+  }
+
+  .narrow .readMore {
+    margin: 9rem 1rem 1rem 43%;
+  }
+
+  .wide .readMore {
+    margin: 9rem 1rem 1rem 53%;
+  }
+}
+
+@media (max-width: 1050px) {
+  .narrow .readMore {
+    margin: 9rem 1rem 1rem 30%;
+  }
+}
+
+@media (max-width: 950px) {
+  .name {
+    font-size: 1.5rem;
+  }
+
+  .designation {
+    font-size: 1.5rem;
+  }
+
+  .details {
+    font-size: 14px;
+  }
+
+  .biography {
+    font-size: 14px;
+  }
+
+  .narrow .readMore {
+    margin: 9rem 1rem 1rem 60%;
+  }
+
+  .wide .readMore {
+    margin: 9rem 1rem 1rem 70%;
+  }
+
+  .wide {
     width: 100%;
-    height: 160px;
-    border-radius: 25px 25px 0 0;
-    margin: 0;
+  }
+
+  .narrow {
+    width: 80%;
+  }
+}
+
+@media (max-width: 700px) {
+  .name {
+    font-size: 1.3rem;
+  }
+
+  .designation {
+    font-size: 1.3rem;
+  }
+
+  .details {
+    font-size: 12px;
+  }
+
+  .biography {
+    font-size: 12px;
+  }
+
+  .narrow .readMore {
+    margin: 9rem 1rem 1rem 50%;
+  }
+
+  .wide .readMore {
+    margin: 9rem 1rem 1rem 60%;
+  }
+}
+
+@media (max-width: 600px) {
+  .name {
+    font-size: 1.2rem;
+  }
+
+  .designation {
+    font-size: 1.2rem;
+  }
+
+  .details {
+    font-size: 11px;
+  }
+
+  .biography {
+    font-size: 11px;
+  }
+
+  .narrow .readMore {
+    margin: 12rem 1rem 1rem 30%;
+  }
+
+  .wide .readMore {
+    margin: 12rem 1rem 1rem 50%;
+  }
+
+  .card {
+    height: 250px;
+  }
+}
+
+@media (max-width: 525px) {
+  .name {
+    font-size: 1.1rem;
+  }
+
+  .designation {
+    font-size: 1.1rem;
+  }
+
+  .details {
+    font-size: 10px;
+  }
+
+  .biography {
+    font-size: 10px;
   }
 
   .content {
-    padding: 1.2rem;
+    align-items: center;
   }
 
-  .readMore {
-    align-self: flex-start;
+  .narrow .readMore {
+    margin: 10rem 1rem 1rem;
+  }
+
+  .wide .readMore {
+    margin: 10rem 1rem 1rem;
+  }
+
+  .card {
+    height: 450px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 390px) {
+  .card {
+    height: 500px;
+  }
+
+  .wide .readMore {
+    margin: 14rem 1rem 1rem;
+  }
+
+  .narrow .readMore {
+    margin: 14rem 1rem 1rem;
+  }
+
+  .name {
+    font-size: 1.0rem;
   }
 }

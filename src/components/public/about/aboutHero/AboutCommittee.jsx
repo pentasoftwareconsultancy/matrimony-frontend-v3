@@ -13,7 +13,7 @@ const AboutCommittee = () => {
           <div
             key={index}
             className={`${styles.card} ${
-              index % 4 === 0 || index % 4 === 3 ? styles.wide : styles.narrow
+              index % 4 === 0 || index % 4 === 2 ? styles.wide : styles.narrow
             }`}
           >
             <img
