@@ -1,4 +1,5 @@
 import React from 'react'
+import './App.css'
 import {Routes, Route} from 'react-router-dom'
 import HomePage from './pages/publicPages/HomePage'
 import PublicNavbar from './components/public/publicNavbar/PublicNavbar'
