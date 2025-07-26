@@ -27,7 +27,7 @@ const AboutHero = () => {
           <span>from years of experience</span>
         </h2>
         <p>
-          Rooted in experience, we blend tradition with trust in matchmaking, as
+          Rooted in experience,<br className={styles.coustomebrake1} /> we blend tradition with trust in matchmaking,<br className={styles.coustomebrake2} /> as
           your happiness is our legacy.
         </p>
         <Link to="/aboutcommittee">
