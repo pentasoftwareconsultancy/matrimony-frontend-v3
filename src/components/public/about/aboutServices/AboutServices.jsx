@@ -67,7 +67,7 @@ const AboutServices = () => {
                   gradientUnits="userSpaceOnUse"
                 >
                   <stop offset="0.0487165" stopColor="#C00A3A" />
-                  <stop offset="1" stopColor="#f9f9f9" />
+                  <stop offset="1" stopColor="#fff" />
                 </linearGradient>
               </defs>
               <path
