@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.css'
 import {Routes, Route} from 'react-router-dom'
 import HomePage from './pages/publicPages/HomePage'
@@ -8,8 +8,13 @@ import AboutPage from './pages/publicPages/AboutPage'
 import RegisterPage from './pages/publicPages/RegisterPage'
 import Login from './components/public/login/Login'
 import AboutCommittee from './components/public/about/aboutHero/AboutCommittee'
+import FirstAnimation from './components/firstAnimation/FirstAnimation'
 
 function App() {
+  const [splashDone, setSplashDone] = useState(false)
+  if (!splashDone) {
+    return <FirstAnimation onFinish={() => setSplashDone(true)} />
+  }
   return (
     <div>
       <PublicNavbar />
