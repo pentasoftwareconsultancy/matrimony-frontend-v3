@@ -1,4 +1,7 @@
 .heroSection {
+  height: 80vh;
+  padding: 7rem 0;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,7 +10,7 @@
 
 .heroSectionDiv {
   width: 95%;
-  height: 90%;
+  height: 100%;
   max-height: 908px;
   max-width: 1676px;
   min-height: calc(100svh - 5vw);
