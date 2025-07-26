@@ -30,7 +30,9 @@ const AboutHero = () => {
           Rooted in experience, we blend tradition with trust in matchmaking, as
           your happiness is our legacy.
         </p>
-        <button className={styles.cta}>Read Success Stories →</button>
+        <Link to="/aboutcommittee">
+          <button className={styles.cta}>Read Success Stories →</button>
+        </Link>
       </div>
     </section>
   );
